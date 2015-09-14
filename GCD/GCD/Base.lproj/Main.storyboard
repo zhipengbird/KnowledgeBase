@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MIG-6I-1wi">
+                                <rect key="frame" x="190" y="40" width="220" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="0DN-TZ-ayj"/>
+                                    <constraint firstAttribute="height" constant="217" id="6Ma-fe-AY0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HLW-PD-eLP">
+                                <rect key="frame" x="190" y="302" width="220" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="YRi-Vp-bZB"/>
+                                    <constraint firstAttribute="width" constant="220" id="rd6-d8-veK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HLW-PD-eLP" firstAttribute="top" secondItem="MIG-6I-1wi" secondAttribute="bottom" constant="45" id="BIe-53-Arv"/>
+                            <constraint firstItem="MIG-6I-1wi" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="Qfc-bf-NH7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HLW-PD-eLP" secondAttribute="bottom" constant="81" id="S2I-1I-gh9"/>
+                            <constraint firstAttribute="centerX" secondItem="MIG-6I-1wi" secondAttribute="centerX" id="aFP-4x-w8e"/>
+                            <constraint firstAttribute="centerX" secondItem="HLW-PD-eLP" secondAttribute="centerX" id="wb8-R9-0Nh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image1" destination="MIG-6I-1wi" id="UZX-LO-TYZ"/>
+                        <outlet property="image2" destination="HLW-PD-eLP" id="PSd-WX-1O5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="547" y="390"/>
+        </scene>
+    </scenes>
+</document>

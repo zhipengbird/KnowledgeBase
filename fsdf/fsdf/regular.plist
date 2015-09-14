@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>regular</key>
+	<string>([ \t]+)\&lt;(\w+)?(.*\sid=\&quot;%@\&quot;.*)&gt;[\s\S]*?\n\1&lt;/\2&gt;</string>
+	<key>origalFileRegular</key>
+	<string>\&quot;(.*[^\\])\&quot;\s?=\s?\&quot;(.*[^\\])\&quot;\s?;</string>
+	<key>label</key>
+	<string>\stext=\&quot;(.*?)\&quot;</string>
+	<key>lable1</key>
+	<string>&lt;string key=&quot;text&quot;&gt;([\s\S]*?)&lt;/string&gt;</string>
+	<key>textfiled</key>
+	<string>placeholder=\&quot;(.*?)\&quot;</string>
+	<key>button</key>
+	<string>&lt;state key=\&quot;normal\&quot;.*?\stitle=\&quot;(.*?)\&quot;</string>
+	<key>viewController</key>
+	<string>\&lt;viewController storyboardIdentifier=\&quot;.*?\&quot;\stitle=\&quot;(.*?)\&quot;</string>
+	<key>newFileRegular</key>
+	<string>\&quot;(.*?)\&quot;\s*=\s*\&quot;(.*?)\&quot;;</string>
+	<key>InsertValue</key>
+	<string>(\s*)&lt;userDefinedRuntimeAttributes&gt;([\S\s]*?)\n\1&lt;/userDefinedRuntimeAttributes&gt;</string>
+	<key>regular1</key>
+	<string>([ \t]+)\&lt;(\w+)?(.*\sid=\&quot;%@\&quot;.*)&gt;([\s\S]*?\n)\1&lt;/\2&gt;</string>
+</dict>
+</plist>
