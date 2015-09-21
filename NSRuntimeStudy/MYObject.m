@@ -11,10 +11,23 @@
 @interface MYObject()
 {
     NSString *sex;
-   
+    int weight;
+    struct myself
+    {
+        int age;
+        int weight;
+    } sss;
 }
 @end
-static NSString * hello;
+
 @implementation MYObject
 
+-(instancetype)init {
+    self = [super init];
+    if(self) {
+        sss.age = 1;
+        sss.weight = 2;
+    }
+    return self;
+}
 @end

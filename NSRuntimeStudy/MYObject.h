@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
- 
 @interface MYObject : NSObject
 @property(nonatomic,strong)NSString * name;
 @property(nonatomic)int age;
-@property(nonatomic)float height;
+@property(nonatomic)float height;  
 @end

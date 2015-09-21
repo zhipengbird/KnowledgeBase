@@ -14,6 +14,7 @@
 		EE62F9551BA6CED7004DA983 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE62F9541BA6CED7004DA983 /* Images.xcassets */; };
 		EE62F9581BA6CED7004DA983 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE62F9561BA6CED7004DA983 /* LaunchScreen.xib */; };
 		EE62F9641BA6CED7004DA983 /* NSRuntimeStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE62F9631BA6CED7004DA983 /* NSRuntimeStudyTests.m */; };
+		EE62F96F1BA7C3B9004DA983 /* MYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EE62F96E1BA7C3B9004DA983 /* MYObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		EE62F95D1BA6CED7004DA983 /* NSRuntimeStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSRuntimeStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE62F9621BA6CED7004DA983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE62F9631BA6CED7004DA983 /* NSRuntimeStudyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRuntimeStudyTests.m; sourceTree = "<group>"; };
+		EE62F96D1BA7C3B9004DA983 /* MYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MYObject.h; path = ../MYObject.h; sourceTree = "<group>"; };
+		EE62F96E1BA7C3B9004DA983 /* MYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MYObject.m; path = ../MYObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		EE62F9461BA6CED6004DA983 /* NSRuntimeStudy */ = {
 			isa = PBXGroup;
 			children = (
+				EE62F96D1BA7C3B9004DA983 /* MYObject.h */,
+				EE62F96E1BA7C3B9004DA983 /* MYObject.m */,
 				EE62F94B1BA6CED7004DA983 /* AppDelegate.h */,
 				EE62F94C1BA6CED7004DA983 /* AppDelegate.m */,
 				EE62F94E1BA6CED7004DA983 /* ViewController.h */,
@@ -163,7 +168,7 @@
 		EE62F93C1BA6CED6004DA983 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = shareit;
 				TargetAttributes = {
 					EE62F9431BA6CED6004DA983 = {
@@ -221,6 +226,7 @@
 			files = (
 				EE62F9501BA6CED7004DA983 /* ViewController.m in Sources */,
 				EE62F94D1BA6CED7004DA983 /* AppDelegate.m in Sources */,
+				EE62F96F1BA7C3B9004DA983 /* MYObject.m in Sources */,
 				EE62F94A1BA6CED6004DA983 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +290,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -296,9 +303,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -333,9 +340,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -347,8 +354,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = NSRuntimeStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -357,8 +367,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = NSRuntimeStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -377,6 +390,7 @@
 				);
 				INFOPLIST_FILE = NSRuntimeStudyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSRuntimeStudy.app/NSRuntimeStudy";
 			};
@@ -392,6 +406,7 @@
 				);
 				INFOPLIST_FILE = NSRuntimeStudyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSRuntimeStudy.app/NSRuntimeStudy";
 			};
@@ -416,6 +431,7 @@
 				EE62F9691BA6CED7004DA983 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE62F96A1BA6CED7004DA983 /* Build configuration list for PBXNativeTarget "NSRuntimeStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +440,7 @@
 				EE62F96C1BA6CED7004DA983 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
